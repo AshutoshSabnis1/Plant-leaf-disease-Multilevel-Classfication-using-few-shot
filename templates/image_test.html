@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container-fluid bg-light min-vh-100 pt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 mb-4">
+            <div class="card shadow mb-4 rounded-3">
+                <div class="card-header py-3">
+                    <h5 class="m-0 text-primary fw-bold">Plant Details</h5>
+                </div>
+                <div class="card-body text-justify">
+                    <div class="row align-items-start">
+                        <div class="col-md-6 text-center">
+                            <figure>
+                                <!-- Display the uploaded image using the base64 encoded data -->
+                                <img class="img-fluid rounded" 
+                                    style="width:100%; height:400px; object-fit:cover; border: 3px solid #007bff;" 
+                                    src="data:image/jpeg;base64,{{ image_data }}" 
+                                    alt="Leaf Image">
+                            </figure>
+                        </div>
+                        <div class="col-md-6">
+
+                            <!-- IF 'result' is NOT None, display plant name -->
+                            {% if result is not none %}
+                            <!-- Plant Name Box -->
+                            <div class="p-3 bg-primary text-white rounded mb-3 shadow" style="border: 2px solid #0056b3;">
+                                <h6 class="fw-bold">🌿 Plant Name</h6>
+                                <p class="mt-2 fs-5">{{ result }}</p>
+                            </div>
+                            {% endif %}
+
+                            <!-- Prediction Box -->
+                            <div class="p-3 bg-success text-white rounded mb-3 shadow" style="border: 2px solid #026d39;">
+                                <h6 class="fw-bold">🔍 Prediction</h6>
+                                <!-- Use |safe to allow bold tags if any -->
+                                <p class="mt-2 fs-5">{{ suggestion|safe }}</p>
+                            </div>
+
+                            <!-- Test Another Image Box -->
+                            <div class="p-3 bg-warning text-dark text-center rounded shadow" style="border: 2px solid #d39e00;">
+                                <a href="{{ url_for('image') }}" class="fw-bold text-dark text-decoration-none">
+                                    📷 Test Another Image &rarr;
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+{% endblock %}
