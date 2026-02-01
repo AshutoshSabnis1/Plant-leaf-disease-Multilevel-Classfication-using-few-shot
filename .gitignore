@@ -1,0 +1,18 @@
+# Virtual environment
+venv/
+
+# Bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Data files
+*.db
+*.npy
+*.h5
+
+# Uploads (user-generated content)
+upload/
+
+# VSCode settings (optional)
+.vscode/

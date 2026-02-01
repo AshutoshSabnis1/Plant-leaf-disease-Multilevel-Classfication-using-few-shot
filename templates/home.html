@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Project Overview</h1>
+    </div>
+
+    <div class="row text-center">
+        <!-- Domain Card -->
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-3">
+                <div class="card-body">
+                    <i class="fas fa-chalkboard fa-3x text-primary mb-2"></i>
+                    <div class="text-xs font-weight-bold text-primary text-uppercase">Domain</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">Deep Learning</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dataset Source Card -->
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-3">
+                <div class="card-body">
+                    <i class="fas fa-database fa-3x text-success mb-2"></i>
+                    <div class="text-xs font-weight-bold text-success text-uppercase">Dataset Source</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">Kaggle</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Algorithm Card -->
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-3">
+                <div class="card-body">
+                    <i class="fas fa-code-branch fa-3x text-info mb-2"></i>
+                    <div class="text-xs font-weight-bold text-info text-uppercase">Algorithm</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">Prototypical Network & EfficientNetB0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Framework Card -->
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-3">
+                <div class="card-body">
+                    <i class="fas fa-cogs fa-3x text-warning mb-2"></i>
+                    <div class="text-xs font-weight-bold text-warning text-uppercase">Framework</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">Flask</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Problem Statement -->
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 bg-primary text-white">
+                    <h6 class="m-0 font-weight-bold">Problem Statement</h6>
+                </div>
+                <div class="card-body text-justify">
+                    Plant diseases threaten crop yield and quality, causing economic losses and food security concerns.
+                    Traditional visual inspections are slow, subjective, and prone to errors. This project aims to create an
+                    automated, accurate plant disease detection system using FewShot learning technique.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Introduction -->
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 bg-success text-white">
+                    <h6 class="m-0 font-weight-bold">Introduction</h6>
+                </div>
+                <div class="card-body text-justify">
+                    Deep learning advancements allow automated plant disease detection. CNNs have proven effective in image
+                    classification. Leveraging deep learning, we can build an intelligent system that analyzes plant leaf images
+                    for disease identification, enabling early intervention.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Proposed Solution -->
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 bg-info text-white">
+                    <h6 class="m-0 font-weight-bold">Proposed Solution</h6>
+                </div>
+                <div class="card-body text-justify">
+                    This project proposes a Few shot multilevel disease classification system. The model will be trained on a custom dataset
+                    of healthy and diseased plant leaves, extracting unique features for classification. Data augmentation
+                    techniques will be used to improve accuracy, and the model will be deployed in a web-based tool for user-friendly
+                    interaction.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Conclusion -->
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 bg-warning text-white">
+                    <h6 class="m-0 font-weight-bold">Conclusion</h6>
+                </div>
+                <div class="card-body text-justify">
+                    Deep learning-based plant disease detection streamlines the identification process, enabling early intervention
+                    and reducing crop losses. This project enhances agricultural efficiency and sustainability. Future research
+                    will refine model accuracy and expand its usability across different plant species.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
