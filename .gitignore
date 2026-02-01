@@ -8,8 +8,7 @@ __pycache__/
 
 # Data files
 *.db
-*.npy
-*.h5
+
 
 # Uploads (user-generated content)
 upload/
